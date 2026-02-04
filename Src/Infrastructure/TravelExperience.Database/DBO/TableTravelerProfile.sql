@@ -1,0 +1,19 @@
+﻿CREATE TABLE [dbo].[TravelerProfile]
+(
+	[Id] UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
+	[FirstName] VARCHAR(100) NOT NULL,
+	[LastName] VARCHAR(100) NOT NULL,
+	[Country] VARCHAR(100) NOT NULL,
+	[City] VARCHAR(100) NOT NULL, 
+	[DateOfBirth] DATETIME NOT NULL,
+	[AvatarUrl] VARCHAR(500) NULL,
+	[Bio] NVARCHAR(MAX) NULL,
+	[CreatedAt] DATETIME NOT NULL DEFAULT GETDATE(),
+	[UserId] UNIQUEIDENTIFIER NOT NULL,
+	
+	CONSTRAINT [FK_TravelerProfile_User]
+		FOREIGN KEY ([UserId]) REFERENCES [dbo].[User]([Id]),
+	
+	CONSTRAINT [UQ_TravelerProfile_User]
+		UNIQUE ([UserId]),
+);

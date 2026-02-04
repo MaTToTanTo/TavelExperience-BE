@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\TravelExperience.Common\TravelExperience.Common.csproj" />
+    <ProjectReference Include="..\..\Domain\TravelExperience.User\TravelExperience.User.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\TravelExperience.Entity\TravelExperience.Entity.csproj" />
+  </ItemGroup>
+
+</Project>
