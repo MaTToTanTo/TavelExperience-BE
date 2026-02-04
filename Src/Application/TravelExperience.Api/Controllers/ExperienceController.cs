@@ -5,7 +5,7 @@ using TravelExperience.ExperienceWorker;
 namespace TravelExperience.Api.Controllers
 {
     [ApiController]
-    [Route("Experience/[Action]")]
+    [Route("[Controller]/[Action]")]
     public class ExperienceController : ControllerBase
     {
         private readonly ExperienceManager _experienceManager;
